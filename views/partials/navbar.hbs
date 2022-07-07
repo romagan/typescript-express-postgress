@@ -1,0 +1,24 @@
+<nav>
+  <div class="container">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Express App</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li {{#if isMain}}class="active"{{/if}} >
+          <a href="/">Main</a>
+        </li>
+        <li {{#if isCourses}}class="active"{{/if}} >
+          <a href="/courses">Courses</a>
+        </li>
+        <li {{#if isAddCourse}}class="active"{{/if}} >
+          <a href="/add-course">Add Course</a>
+        </li>
+        <li {{#if isAbout}}class="active"{{/if}} >
+          <a href="/about">About</a>
+        </li>
+        <li {{#if isCart}}class="active"{{/if}} >
+          <a href="/cart">Cart</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

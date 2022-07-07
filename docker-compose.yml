@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  psql:
+    image: postgres:alpine3.14
+    volumes:
+      - pgsql-data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_DB: crm_synergy
+      POSTGRES_USER: dev_user
+      POSTGRES_PASSWORD: dev_user
+      PGDATA: pgsql
+    ports:
+      - "5432:5432"
+
+volumes:
+  pgsql-data:
+
+# docker network create --driver=bridge --subnet=100.64.0.0/24 --ip-range=100.64.0.0/24 --gateway=100.64.0.1 dev
+networks:
+  default:
+    external:
+      name: dev
